@@ -74,7 +74,7 @@ end
 
 function v = pfecalc(A)
 A = sparse(A);
-[v] = eigs(A',1);
+[v,~] = eigs(A',1);
 if (max(v) < abs(min(v)))               % All negative
   v = -v;
 end
